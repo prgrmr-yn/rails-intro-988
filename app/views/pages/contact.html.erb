@@ -1,0 +1,18 @@
+<h1>Contact us</h1>
+
+<form action="/contact" method="get">
+  <label for="member">Please type a name: </label>
+  <input type="text" name="member" id="member" placeholder="charlie" value="<%=@search %>">
+  <input type="submit">
+
+</form>
+
+<ol>
+  <% @members.each do |member| %>
+    <li><%= member.capitalize %></li>
+  <% end %>
+</ol>
+
+<p>We like receiving emails💜</p>
+
+<%= link_to 'Homepage', root_path %>
